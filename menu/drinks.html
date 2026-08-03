@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Drinks Menu | Podge &amp; Tin Eatery</title>
+<meta name="description" content="Podge & Tin drinks menu — draught, bottles, gin, wine, spirits, hot drinks, famous milkshakes and cocktails, fully licensed bar." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { coral: '#E8583E', magenta: '#ED1E79', navy: '#241D53', charcoal: '#3A3A3A', cream: '#FDF3F0' },
+        fontFamily: { display: ['Anton', 'sans-serif'], script: ['"Permanent Marker"', 'cursive'], sans: ['Inter', 'sans-serif'] },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body class="pt-[72px] bg-cream text-charcoal font-sans antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <nav class="bg-charcoal shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-[72px] flex items-center justify-between">
+      <a href="../index.html" class="font-display text-2xl md:text-3xl text-white tracking-wide whitespace-nowrap">
+        Podge <span class="text-coral">&amp;</span> Tin
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <span id="menu-trigger" class="nav-link active">Menu</span>
+        <a href="../takeaway.html" class="nav-link">Takeaway</a>
+        <a href="../find-us.html" class="nav-link">Find Us</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:01543899580" class="nav-link">01543 899580</a>
+        <a href="../book-a-table.html" class="bg-coral text-white font-semibold text-sm uppercase tracking-wide px-5 py-2.5 rounded-full hover:bg-magenta transition-colors whitespace-nowrap">Book a Table</a>
+      </div>
+      <button id="hamburger" class="lg:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <div id="sub-nav">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex gap-10">
+        <a href="food.html" class="sub-nav-link">Food Menu</a>
+        <a href="drinks.html" class="sub-nav-link">Drinks Menu</a>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-6 py-4 flex flex-col gap-1">
+      <a href="../index.html" class="nav-link py-3 border-b border-white/10">Home</a>
+      <a href="../about.html" class="nav-link py-3 border-b border-white/10">About</a>
+      <button id="mobile-menu-trigger" class="nav-link py-3 border-b border-white/10 text-left flex justify-between items-center w-full">Menu <span class="text-coral">+</span></button>
+      <div id="mobile-menu-food" class="pl-4 open">
+        <a href="food.html" class="sub-nav-link block py-2">Food Menu</a>
+        <a href="drinks.html" class="sub-nav-link block py-2">Drinks Menu</a>
+      </div>
+      <a href="../takeaway.html" class="nav-link py-3 border-b border-white/10">Takeaway</a>
+      <a href="../find-us.html" class="nav-link py-3 border-b border-white/10">Find Us</a>
+      <a href="tel:01543899580" class="nav-link py-3 border-b border-white/10">Call: 01543 899580</a>
+      <a href="../book-a-table.html" class="bg-coral text-white font-semibold text-sm uppercase tracking-wide px-5 py-3 rounded-full text-center mt-3">Book a Table</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE BANNER ============ -->
+<section class="parallax-section h-[34vh] min-h-[220px] flex items-center px-4 md:px-8 border-b-4 border-coral">
+  <div class="parallax-layer" data-speed="0.1" style="background-image:url('../assets/img/inside-pub.jpg')"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
+    <p class="font-script text-white text-xl md:text-2xl mb-1">Fully licensed bar</p>
+    <h1 class="font-display text-white text-[38px] md:text-[62px] uppercase leading-none drop-shadow-lg">Drinks Menu</h1>
+  </div>
+</section>
+
+<!-- ============ CATEGORY JUMP NAV ============ -->
+<nav id="category-nav" class="bg-white border-b border-charcoal/10">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-3 flex gap-3 overflow-x-auto">
+    <a href="#soft-drinks" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Soft Drinks</a>
+    <a href="#draught" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Draught</a>
+    <a href="#bottles" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Bottles</a>
+    <a href="#gin" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Gin</a>
+    <a href="#wine" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Wine</a>
+    <a href="#spirits" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Spirits</a>
+    <a href="#hot-drinks" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Hot Drinks</a>
+    <a href="#shakes" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Milkshakes</a>
+    <a href="#cocktails" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Cocktails</a>
+  </div>
+</nav>
+
+<p class="text-center text-xs text-charcoal/50 max-w-3xl mx-auto px-4 pt-6">
+  Prices shown are last known from a previous version of our menu &mdash; please confirm with us before ordering. Please drink responsibly.
+</p>
+
+<main class="max-w-3xl mx-auto px-4 md:px-8 py-10 space-y-16">
+
+  <!-- SOFT DRINKS -->
+  <section id="soft-drinks">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Soft Drinks</h2>
+    <div class="space-y-4 text-sm">
+      <p><strong>From the tap</strong> (Pepsi, Pepsi Max, Lemonade, Fizzy Orange): Regular &pound;3.00 / Pint &pound;4.00</p>
+      <p><strong>Bottles:</strong> Coke &pound;3.70 &middot; Coke Zero &pound;3.50 &middot; J20 &pound;3.50 &middot; Frobishers Sparkling Ginger &pound;3.90 &middot; Fentimans Rose Lemonade &pound;3.90 &middot; Appletiser &pound;3.50 &middot; Still Water &pound;3.00 &middot; Sparkling Water &pound;3.00</p>
+      <p><strong>Fresh Eager Juice</strong> (&pound;3.50 each): Apple &middot; Orange &middot; Cranberry &middot; Pineapple</p>
+      <p><strong>Fever-Tree Mixers</strong> (&pound;2.95 each): Indian Tonic &middot; Light Tonic &middot; Mediterranean &middot; Ginger Ale &middot; Elderflower</p>
+    </div>
+  </section>
+
+  <!-- DRAUGHT -->
+  <section id="draught">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Draught</h2>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-3 flex justify-between"><span>Pepsi <span class="text-xs text-charcoal/50">5.1%</span></span><span class="font-display text-coral">&pound;6.20</span></div>
+      <div class="py-3 flex justify-between"><span>Madri <span class="text-xs text-charcoal/50">4.6%</span></span><span class="font-display text-coral">&pound;5.80</span></div>
+      <div class="py-3 flex justify-between"><span>Blue Moon <span class="text-xs text-charcoal/50">Belgian Style Wheat Ale, 5.4%</span></span><span class="font-display text-coral">&pound;5.90</span></div>
+      <div class="py-3 flex justify-between"><span>Meantime London Pale Ale <span class="text-xs text-charcoal/50">4.2%</span></span><span class="font-display text-coral">&pound;5.50</span></div>
+      <div class="py-3 flex justify-between"><span>Guinness <span class="text-xs text-charcoal/50">4.1%</span></span><span class="font-display text-coral">&pound;5.90</span></div>
+      <div class="py-3 flex justify-between"><span>Thatchers <span class="text-xs text-charcoal/50">4.8%</span></span><span class="font-display text-coral">&pound;4.80</span></div>
+    </div>
+  </section>
+
+  <!-- BOTTLES -->
+  <section id="bottles">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Bottles &mdash; Beer &amp; Cider</h2>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-3 flex justify-between"><span>Desperados <span class="text-xs text-charcoal/50">5.9%</span></span><span class="font-display text-coral">&pound;4.50</span></div>
+      <div class="py-3 flex justify-between"><span>Corona <span class="text-xs text-charcoal/50">4.5%</span></span><span class="font-display text-coral">&pound;4.50</span></div>
+      <div class="py-3 flex justify-between"><span>Budweiser <span class="text-xs text-charcoal/50">4.8%</span></span><span class="font-display text-coral">&pound;4.50</span></div>
+      <div class="py-3 flex justify-between"><span>Kopparberg Mixed Fruit / Strawberry &amp; Lime <span class="text-xs text-charcoal/50">4.0%</span></span><span class="font-display text-coral">&pound;4.50</span></div>
+      <div class="py-3 flex justify-between"><span>Old Mout Cider Wild Cherries and Berries <span class="text-xs text-charcoal/50">4.0%</span></span><span class="font-display text-coral">&pound;4.70</span></div>
+      <div class="py-3 flex justify-between"><span>Kopparberg Alcohol-Free Cider <span class="text-xs text-charcoal/50">Strawberry &amp; Lime, 0.0%</span></span><span class="font-display text-coral">&pound;4.50</span></div>
+      <div class="py-3 flex justify-between"><span>Becks Blue <span class="text-xs text-charcoal/50">0.0%</span></span><span class="font-display text-coral">&pound;3.50</span></div>
+      <div class="py-3 flex justify-between"><span>Guinness 0.0% Alcohol-Free Draught Stout</span><span class="font-display text-coral">&pound;4.90</span></div>
+    </div>
+  </section>
+
+  <!-- GIN -->
+  <section id="gin">
+    <p class="font-script text-magenta text-xl mb-1">Let the fun be Gin</p>
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Gin</h2>
+    <p class="text-sm mb-2"><strong>Single / Double:</strong> Gordons &pound;4.20 / &pound;5.70 &middot; Bombay &pound;4.70 / &pound;6.20 &middot; Gordons Pink &pound;4.70 / &pound;6.20</p>
+    <p class="text-sm">
+      <strong>All Speciality Gins &pound;5.15</strong> (complemented with the Fever-Tree mixer range at &pound;2.95): Hendricks 41.4% &middot; Monkey 47 Gin 47% &middot; Brockmans 40% &middot; Martin Millers 40% &middot; Whitley Neill (Raspberry / Blood Orange / Rhubarb &amp; Ginger / Parma Violet) 43%
+    </p>
+    <p class="text-xs text-charcoal/50 mt-2">Confirm full gin list with the bar &mdash; new specials rotate in regularly.</p>
+  </section>
+
+  <!-- WINE -->
+  <section id="wine">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Wine</h2>
+    <h3 class="font-semibold text-lg mb-2">House Wines <span class="text-xs text-charcoal/50 font-normal">(175ml / 250ml / Bottle)</span></h3>
+    <div class="divide-y divide-charcoal/10 text-sm mb-6">
+      <div class="py-2 flex justify-between"><span>Red / White / Ros&eacute; House Wine</span><span class="font-display text-coral">&pound;4.40 / &pound;5.40 / &pound;14.40</span></div>
+      <div class="py-2 flex justify-between"><span>Jack Rabbit White (Chardonnay / Pinot Grigio / Sauvignon Blanc / White Zinfandel)</span><span class="font-display text-coral">&pound;5.40 / &pound;6.40 / &pound;16.40</span></div>
+      <div class="py-2 flex justify-between"><span>Jack Rabbit Red (Merlot / Shiraz)</span><span class="font-display text-coral">&pound;5.40 / &pound;6.40 / &pound;16.40</span></div>
+    </div>
+    <h3 class="font-semibold text-lg mb-2">Main Range <span class="text-xs text-charcoal/50 font-normal">(175ml / 250ml / Bottle)</span></h3>
+    <div class="divide-y divide-charcoal/10 text-sm mb-6">
+      <div class="py-2 flex justify-between"><span>White &mdash; Mac/By Sauvignon Blanc (New Zealand)</span><span class="font-display text-coral">&pound;6.90 / &pound;8.50 / &pound;20.70</span></div>
+      <div class="py-2 flex justify-between"><span>Ros&eacute; &mdash; Pink Fox Zinfandel (USA)</span><span class="font-display text-coral">&pound;5.90 / &pound;7.40 / &pound;17.70</span></div>
+      <div class="py-2 flex justify-between"><span>Red &mdash; Calusari Pinot Noir (Romania)</span><span class="font-display text-coral">&pound;5.55 / &pound;7.05 / &pound;16.70</span></div>
+      <div class="py-2 flex justify-between"><span>Red &mdash; Jack Rabbit Malbec (Argentina)</span><span class="font-display text-coral">&pound;7.10 / &pound;8.70 / &pound;20.90</span></div>
+      <div class="py-2 flex justify-between"><span>Blush &mdash; Bella Modello Pinot Grigio Ros&eacute; (Italy)</span><span class="font-display text-coral">&pound;5.70 / &pound;6.70 / &pound;16.70</span></div>
+    </div>
+    <p class="text-sm"><strong>Fancy a bit of Bubbly?</strong> House Prosecco &pound;16.00 &middot; Prosecco (glass) &pound;5.95</p>
+  </section>
+
+  <!-- SPIRITS -->
+  <section id="spirits">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Spirits</h2>
+    <p class="text-xs text-charcoal/50 mb-4">Single / Double</p>
+    <div class="space-y-3 text-sm">
+      <p><strong>Vodka:</strong> Smirnoff 37.5% &pound;5.00 / &pound;6.50 &middot; Grey Goose 40% &pound;6.50 / &pound;8.50 &middot; Flavoured Absolut Vodka &pound;5.50 / &pound;7.00</p>
+      <p><strong>Whisky &amp; Bourbon:</strong> Jameson 40% &pound;5.00 / &pound;7.00 &middot; Glenfiddich 40% &pound;6.50 / &pound;8.50 &middot; Monkey Shoulder 40% &pound;7.00 / &pound;10.00 &middot; Jack Daniels 40% &pound;5.00 / &pound;7.00 &middot; Wild Turkey 40% &pound;6.00 / &pound;8.00</p>
+      <p><strong>Cognac:</strong> Martell 40% &pound;5.00 / &pound;7.00 &middot; Hennessy 40% &pound;6.00 / &pound;8.00</p>
+      <p><strong>Rum:</strong> Bacardi 37.5% &pound;5.00 / &pound;7.00 &middot; Captain Morgan Spiced Rum 35% &pound;5.00 / &pound;7.00 &middot; Old J Gold Spiced Rum 40% &pound;6.00 / &pound;8.00 &middot; Old J Tiki Fire 75.5% &pound;8.00 / &pound;10.00</p>
+      <p><strong>Liqueur:</strong> Baileys 17% &pound;5.50 &middot; Tia Maria 20% &pound;5.50 &middot; Archers 18% &pound;5.50 &middot; Disaronno 28% &pound;5.00 / &pound;7.00 &middot; Southern Comfort 35% &pound;5.00 / &pound;7.00 &middot; Malibu 21% &pound;5.00 / &pound;7.00 &middot; Martini 15% 50ml (Bianco / Rosso / Extra Dry) &pound;5.50</p>
+      <p><strong>Shots:</strong> Sambuca &amp; Tequila &pound;4.50</p>
+    </div>
+  </section>
+
+  <!-- HOT DRINKS -->
+  <section id="hot-drinks">
+    <p class="font-script text-magenta text-xl mb-1">Coffee Time</p>
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Hot Drinks</h2>
+    <p class="text-sm">Tea &pound;3.50 &middot; Coffee &pound;4.00 &middot; Latte &pound;4.50 &middot; Cappuccino &pound;4.50 &middot; Hot Chocolate &pound;5.00 &middot; Irish Coffee &pound;7.00 &middot; Baileys Coffee &pound;7.00 &middot; Tia Maria Coffee &pound;7.00</p>
+  </section>
+
+  <!-- MILKSHAKES -->
+  <section id="shakes">
+    <p class="font-script text-magenta text-xl mb-1">If you can't stay, shake away!</p>
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Famous Shakes</h2>
+    <p class="text-sm text-charcoal/60 mb-6">Freshly made &mdash; &pound;5.45 each. All milkshakes are available to go, made with fresh ice cream &amp; finished with whipped cream.</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 text-sm mb-8">
+      <li>Classic Vanilla</li>
+      <li>Kinder Bueno</li>
+      <li>Fresh Strawberry</li>
+      <li>Lotus Biscoff</li>
+      <li>Mint Infusion</li>
+      <li>Oreo Shake</li>
+      <li>Chocolate Peanut Butter</li>
+    </ul>
+    <h3 class="font-display text-xl uppercase mb-3">Shaketail <span class="text-xs text-charcoal/50 font-sans normal-case">(over 18's only) &mdash; &pound;7.95 each</span></h3>
+    <div class="divide-y divide-charcoal/10 text-sm">
+      <div class="py-3"><strong>Captain Podge</strong> &mdash; double spiced rum with Cadbury's chocolate</div>
+      <div class="py-3"><strong>Coconuttz</strong> &mdash; double Malibu with double Bounty!</div>
+      <div class="py-3"><strong>Cookies and Cream</strong> &mdash; the original Baileys Irish Cream &amp; choco chip cookies</div>
+    </div>
+  </section>
+
+  <!-- COCKTAILS -->
+  <section id="cocktails">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Cocktails</h2>
+    <h3 class="font-semibold text-lg mb-2">Alcoholic Cocktails <span class="text-sm font-normal text-charcoal/60">&mdash; &pound;8.95 each, or 2 of the same for &pound;15.00</span></h3>
+    <div class="divide-y divide-charcoal/10 text-sm mb-8">
+      <div class="py-3"><strong>Podge Martini</strong> &mdash; passion fruit, vanilla vodka and pineapple juices</div>
+      <div class="py-3"><strong>Frozen Strawberry Daiquiri</strong> &mdash; ultimate thirst quencher! strawberries, rum, lime juice and sugar</div>
+      <div class="py-3"><strong>Mojito</strong> (Classic / Strawberry / Passion) &mdash; fresh mint, muddled limes, sugar syrup and white rum</div>
+      <div class="py-3"><strong>Chase Romance</strong> &mdash; citrus and pineapple juice shaken with rum and amaretto (our favourite!)</div>
+      <div class="py-3"><strong>Classic Bramble</strong> &mdash; dry gin, lemon juice, sugar syrup, cr&egrave;me de m&ucirc;re and crushed ice</div>
+      <div class="py-3"><strong>Mango Margarita</strong> &mdash; sweet and salty with a little spice!</div>
+      <div class="py-3"><strong>High Roller</strong> &mdash; hibiscus, Cointreau, lime and vodka</div>
+      <div class="py-3"><strong>Guinness Black Magic</strong> &mdash; a must try! bourbon, lime, grenadine, blackberry liqueur topped with stout</div>
+    </div>
+    <h3 class="font-semibold text-lg mb-2">Fizz</h3>
+    <div class="divide-y divide-charcoal/10 text-sm mb-8">
+      <div class="py-3"><strong>Aperol Spritz</strong> &mdash; Aperol, prosecco and soda</div>
+      <div class="py-3"><strong>Limoncello Spritz</strong> &mdash; Limoncello liqueur, prosecco and soda</div>
+      <div class="py-3"><strong>Passion Fruit Spritz</strong> &mdash; passion fruit liqueur, vanilla syrup, prosecco and soda</div>
+    </div>
+    <h3 class="font-semibold text-lg mb-2">Mocktails <span class="text-sm font-normal text-charcoal/60">&mdash; &pound;5.95 each</span></h3>
+    <div class="divide-y divide-charcoal/10 text-sm">
+      <div class="py-3"><strong>Mango Passion</strong> &mdash; tropical with a twist!</div>
+      <div class="py-3"><strong>Strawberry-licious</strong> &mdash; sweet and berrylicious!</div>
+    </div>
+  </section>
+
+  <div class="text-center pt-6">
+    <a href="food.html" class="inline-block bg-navy hover:bg-charcoal transition-colors text-white font-semibold uppercase tracking-wide text-sm px-7 py-3.5 rounded-full">View Food Menu &rarr;</a>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-cream">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <div class="font-display text-2xl text-white mb-3">Podge <span class="text-coral">&amp;</span> Tin</div>
+      <p class="text-sm text-cream/70">Serving awesome food, using and supporting our local independents for our fine meats and fresh fish.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Find Us</h3>
+      <p class="text-sm text-cream/80">26 Stafford Road<br />Cannock, England<br />WS11 4AG</p>
+      <a href="tel:01543899580" class="block text-sm mt-2 hover:text-coral transition-colors">01543 899580</a>
+      <a href="mailto:podgeandtin@gmail.com" class="block text-sm hover:text-coral transition-colors">podgeandtin@gmail.com</a>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Opening Hours</h3>
+      <ul class="text-sm text-cream/80 space-y-1">
+        <li>Mon &ndash; Thu: 12:00 &ndash; 21:00</li>
+        <li>Fri &ndash; Sat: 12:00 &ndash; 21:30</li>
+        <li>Sun &amp; Bank Hols: 12:00 &ndash; 19:30</li>
+      </ul>
+      <p class="text-xs text-cream/50 mt-2">Please book ahead on Fridays &amp; Saturdays.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Follow Us</h3>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+        <a href="https://www.facebook.com/Podge-and-Tin-Cannock-507513026007146" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/podgeandtin" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
+        <a href="https://twitter.com/podgeandtin" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Twitter/X</a>
+      </div>
+      <a href="../jobs.html" class="inline-block mt-4 text-sm text-cream/70 hover:text-coral transition-colors">We're hiring &mdash; Careers &rarr;</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-cream/50 px-4">
+    <p>If you have any allergies, please speak to a member of staff before ordering &mdash; full allergen information is available on request.</p>
+    <p class="mt-2">&copy; <span id="year"></span> Podge &amp; Tin Eatery. Prices &amp; details last confirmed from a previous version of this site &mdash; contact us to confirm before visiting.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/parallax.js"></script>
+<script src="../assets/js/nav.js"></script>
+</body>
+</html>

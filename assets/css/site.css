@@ -1,0 +1,189 @@
+/* Podge & Tin — shared site styles (parallax, nav, photo placeholders, fonts) */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --pt-coral: #E8583E;
+  --pt-magenta: #ED1E79;
+  --pt-navy: #241D53;
+  --pt-charcoal: #3A3A3A;
+  --pt-cream: #FDF3F0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px; /* keep anchor jumps clear of the fixed header */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--pt-cream);
+}
+
+.font-display {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.font-script {
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* ---------- Parallax panels ---------- */
+
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: -12%;
+  left: 0;
+  right: 0;
+  bottom: -12%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+/* ---------- Placeholder "photo" panels (swap for real bg-image later) ---------- */
+
+.photo-placeholder {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0px,
+    rgba(255, 255, 255, 0.06) 18px,
+    transparent 18px,
+    transparent 36px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.ph-coral   { background-color: #c8452e; }
+.ph-magenta { background-color: #c21669; }
+.ph-navy    { background-color: #1a1440; }
+.ph-charcoal{ background-color: #2b2b2b; }
+
+/* ---------- Floating teaser cards (reveal on scroll) ---------- */
+
+.reveal-card {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Header / two-tier nav ---------- */
+
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--pt-coral);
+}
+
+#sub-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #2f2f2f;
+}
+
+#sub-nav.open {
+  max-height: 80px;
+}
+
+.sub-nav-link {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f4d9d3;
+  transition: color 0.15s ease;
+}
+
+.sub-nav-link:hover {
+  color: #fff;
+}
+
+/* Mobile accordion menu */
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+#mobile-menu.open {
+  max-height: 640px;
+}
+
+#mobile-menu-food {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#mobile-menu-food.open {
+  max-height: 120px;
+}
+
+/* ---------- Menu page category jump-nav ---------- */
+
+#category-nav {
+  position: sticky;
+  top: 96px;
+  z-index: 40;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.category-pill {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}

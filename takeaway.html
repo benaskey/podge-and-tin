@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Takeaway | Podge &amp; Tin Eatery</title>
+<meta name="description" content="If you can't stay, takeaway! Order from Podge & Tin, Cannock — call 01543 899580 to place your order for collection." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { coral: '#E8583E', magenta: '#ED1E79', navy: '#241D53', charcoal: '#3A3A3A', cream: '#FDF3F0' },
+        fontFamily: { display: ['Anton', 'sans-serif'], script: ['"Permanent Marker"', 'cursive'], sans: ['Inter', 'sans-serif'] },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body class="pt-[72px] bg-cream text-charcoal font-sans antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <nav class="bg-charcoal shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-[72px] flex items-center justify-between">
+      <a href="index.html" class="font-display text-2xl md:text-3xl text-white tracking-wide whitespace-nowrap">
+        Podge <span class="text-coral">&amp;</span> Tin
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <span id="menu-trigger" class="nav-link">Menu</span>
+        <a href="takeaway.html" class="nav-link active">Takeaway</a>
+        <a href="find-us.html" class="nav-link">Find Us</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:01543899580" class="nav-link">01543 899580</a>
+        <a href="book-a-table.html" class="bg-coral text-white font-semibold text-sm uppercase tracking-wide px-5 py-2.5 rounded-full hover:bg-magenta transition-colors whitespace-nowrap">Book a Table</a>
+      </div>
+      <button id="hamburger" class="lg:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <div id="sub-nav">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex gap-10">
+        <a href="menu/food.html" class="sub-nav-link">Food Menu</a>
+        <a href="menu/drinks.html" class="sub-nav-link">Drinks Menu</a>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-6 py-4 flex flex-col gap-1">
+      <a href="index.html" class="nav-link py-3 border-b border-white/10">Home</a>
+      <a href="about.html" class="nav-link py-3 border-b border-white/10">About</a>
+      <button id="mobile-menu-trigger" class="nav-link py-3 border-b border-white/10 text-left flex justify-between items-center w-full">Menu <span class="text-coral">+</span></button>
+      <div id="mobile-menu-food" class="pl-4">
+        <a href="menu/food.html" class="sub-nav-link block py-2">Food Menu</a>
+        <a href="menu/drinks.html" class="sub-nav-link block py-2">Drinks Menu</a>
+      </div>
+      <a href="takeaway.html" class="nav-link py-3 border-b border-white/10">Takeaway</a>
+      <a href="find-us.html" class="nav-link py-3 border-b border-white/10">Find Us</a>
+      <a href="tel:01543899580" class="nav-link py-3 border-b border-white/10">Call: 01543 899580</a>
+      <a href="book-a-table.html" class="bg-coral text-white font-semibold text-sm uppercase tracking-wide px-5 py-3 rounded-full text-center mt-3">Book a Table</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE BANNER ============ -->
+<section class="parallax-section h-[42vh] min-h-[280px] flex items-center px-4 md:px-8 border-b-4 border-coral">
+  <div class="parallax-layer" data-speed="0.1" style="background-image:url('assets/img/wraps.jpg')"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
+    <p class="font-script text-magenta text-2xl md:text-4xl mb-2">If you can't stay,</p>
+    <h1 class="font-display text-white text-[42px] md:text-[70px] uppercase leading-none drop-shadow-lg">Takeaway!</h1>
+  </div>
+</section>
+
+<section class="max-w-3xl mx-auto px-4 md:px-8 py-16 md:py-20">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-14">
+    <div class="bg-white rounded-lg border-2 border-coral/30 p-6 shadow-sm relative pt-10">
+      <div class="absolute -top-5 left-6 h-10 w-10 rounded-full bg-coral text-white font-display flex items-center justify-center text-lg">1</div>
+      <h3 class="font-display text-lg uppercase mb-2">Choose</h3>
+      <p class="text-sm text-charcoal/70">Choose what you want from our menu.</p>
+    </div>
+    <div class="bg-white rounded-lg border-2 border-coral/30 p-6 shadow-sm relative pt-10">
+      <div class="absolute -top-5 left-6 h-10 w-10 rounded-full bg-coral text-white font-display flex items-center justify-center text-lg">2</div>
+      <h3 class="font-display text-lg uppercase mb-2">Call</h3>
+      <p class="text-sm text-charcoal/70">Call us on <a href="tel:01543899580" class="text-coral font-semibold hover:text-magenta transition-colors">01543 899580</a> and place your order.</p>
+    </div>
+    <div class="bg-white rounded-lg border-2 border-coral/30 p-6 shadow-sm relative pt-10">
+      <div class="absolute -top-5 left-6 h-10 w-10 rounded-full bg-coral text-white font-display flex items-center justify-center text-lg">3</div>
+      <h3 class="font-display text-lg uppercase mb-2">Estimate</h3>
+      <p class="text-sm text-charcoal/70">We'll give you an estimate for collection.</p>
+    </div>
+    <div class="bg-white rounded-lg border-2 border-coral/30 p-6 shadow-sm relative pt-10">
+      <div class="absolute -top-5 left-6 h-10 w-10 rounded-full bg-coral text-white font-display flex items-center justify-center text-lg">4</div>
+      <h3 class="font-display text-lg uppercase mb-2">Enjoy</h3>
+      <p class="text-sm text-charcoal/70">Pick up and enjoy!</p>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a href="tel:01543899580" class="inline-block bg-coral hover:bg-magenta transition-colors text-white font-semibold uppercase tracking-wide text-lg px-10 py-5 rounded-full shadow-lg">
+      Call 01543 899580 &rarr;
+    </a>
+    <p class="text-sm text-charcoal/60 mt-6">
+      Not sure what to order? <a href="menu/food.html" class="text-coral font-semibold hover:text-magenta transition-colors">Browse the Food Menu</a> or
+      <a href="menu/drinks.html" class="text-coral font-semibold hover:text-magenta transition-colors">Milkshakes to go</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-cream">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <div class="font-display text-2xl text-white mb-3">Podge <span class="text-coral">&amp;</span> Tin</div>
+      <p class="text-sm text-cream/70">Serving awesome food, using and supporting our local independents for our fine meats and fresh fish.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Find Us</h3>
+      <p class="text-sm text-cream/80">26 Stafford Road<br />Cannock, England<br />WS11 4AG</p>
+      <a href="tel:01543899580" class="block text-sm mt-2 hover:text-coral transition-colors">01543 899580</a>
+      <a href="mailto:podgeandtin@gmail.com" class="block text-sm hover:text-coral transition-colors">podgeandtin@gmail.com</a>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Opening Hours</h3>
+      <ul class="text-sm text-cream/80 space-y-1">
+        <li>Mon &ndash; Thu: 12:00 &ndash; 21:00</li>
+        <li>Fri &ndash; Sat: 12:00 &ndash; 21:30</li>
+        <li>Sun &amp; Bank Hols: 12:00 &ndash; 19:30</li>
+      </ul>
+      <p class="text-xs text-cream/50 mt-2">Please book ahead on Fridays &amp; Saturdays.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Follow Us</h3>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+        <a href="https://www.facebook.com/Podge-and-Tin-Cannock-507513026007146" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/podgeandtin" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
+        <a href="https://twitter.com/podgeandtin" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Twitter/X</a>
+      </div>
+      <a href="jobs.html" class="inline-block mt-4 text-sm text-cream/70 hover:text-coral transition-colors">We're hiring &mdash; Careers &rarr;</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-cream/50 px-4">
+    <p>If you have any allergies, please speak to a member of staff before ordering &mdash; full allergen information is available on request.</p>
+    <p class="mt-2">&copy; <span id="year"></span> Podge &amp; Tin Eatery. Prices &amp; details last confirmed from a previous version of this site &mdash; contact us to confirm before visiting.</p>
+  </div>
+</footer>
+
+<script src="assets/js/parallax.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>

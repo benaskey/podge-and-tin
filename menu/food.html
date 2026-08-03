@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Food Menu | Podge &amp; Tin Eatery</title>
+<meta name="description" content="Podge & Tin food menu — starters, steaks, burgers, veri peri chicken, fish & chips, flat breads, wraps, salads, kids meals, sides and desserts." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { coral: '#E8583E', magenta: '#ED1E79', navy: '#241D53', charcoal: '#3A3A3A', cream: '#FDF3F0' },
+        fontFamily: { display: ['Anton', 'sans-serif'], script: ['"Permanent Marker"', 'cursive'], sans: ['Inter', 'sans-serif'] },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body class="pt-[72px] bg-cream text-charcoal font-sans antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <nav class="bg-charcoal shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-[72px] flex items-center justify-between">
+      <a href="../index.html" class="font-display text-2xl md:text-3xl text-white tracking-wide whitespace-nowrap">
+        Podge <span class="text-coral">&amp;</span> Tin
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <span id="menu-trigger" class="nav-link active">Menu</span>
+        <a href="../takeaway.html" class="nav-link">Takeaway</a>
+        <a href="../find-us.html" class="nav-link">Find Us</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:01543899580" class="nav-link">01543 899580</a>
+        <a href="../book-a-table.html" class="bg-coral text-white font-semibold text-sm uppercase tracking-wide px-5 py-2.5 rounded-full hover:bg-magenta transition-colors whitespace-nowrap">Book a Table</a>
+      </div>
+      <button id="hamburger" class="lg:hidden text-white text-3xl leading-none px-2" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <div id="sub-nav">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex gap-10">
+        <a href="food.html" class="sub-nav-link">Food Menu</a>
+        <a href="drinks.html" class="sub-nav-link">Drinks Menu</a>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="lg:hidden bg-charcoal border-t border-white/10">
+    <div class="px-6 py-4 flex flex-col gap-1">
+      <a href="../index.html" class="nav-link py-3 border-b border-white/10">Home</a>
+      <a href="../about.html" class="nav-link py-3 border-b border-white/10">About</a>
+      <button id="mobile-menu-trigger" class="nav-link py-3 border-b border-white/10 text-left flex justify-between items-center w-full">Menu <span class="text-coral">+</span></button>
+      <div id="mobile-menu-food" class="pl-4 open">
+        <a href="food.html" class="sub-nav-link block py-2">Food Menu</a>
+        <a href="drinks.html" class="sub-nav-link block py-2">Drinks Menu</a>
+      </div>
+      <a href="../takeaway.html" class="nav-link py-3 border-b border-white/10">Takeaway</a>
+      <a href="../find-us.html" class="nav-link py-3 border-b border-white/10">Find Us</a>
+      <a href="tel:01543899580" class="nav-link py-3 border-b border-white/10">Call: 01543 899580</a>
+      <a href="../book-a-table.html" class="bg-coral text-white font-semibold text-sm uppercase tracking-wide px-5 py-3 rounded-full text-center mt-3">Book a Table</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE BANNER ============ -->
+<section class="parallax-section h-[34vh] min-h-[220px] flex items-center px-4 md:px-8 border-b-4 border-coral">
+  <div class="parallax-layer" data-speed="0.1" style="background-image:url('../assets/img/burger.jpg')"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
+    <p class="font-script text-white text-xl md:text-2xl mb-1">Really BIG burgers, awesome everything</p>
+    <h1 class="font-display text-white text-[38px] md:text-[62px] uppercase leading-none drop-shadow-lg">Food Menu</h1>
+  </div>
+</section>
+
+<!-- ============ CATEGORY JUMP NAV ============ -->
+<nav id="category-nav" class="bg-white border-b border-charcoal/10">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-3 flex gap-3 overflow-x-auto">
+    <a href="#starters" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Starters</a>
+    <a href="#grill-steaks" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Grill &amp; Steaks</a>
+    <a href="#mixed-grill" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Mixed Grill</a>
+    <a href="#lamb-chops" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Lamb Chops</a>
+    <a href="#burgers" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Burgers</a>
+    <a href="#veri-peri" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Veri Peri Chicken</a>
+    <a href="#fish-and-chips" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Fish &amp; Chips</a>
+    <a href="#flatbreads" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Flat Breads</a>
+    <a href="#wraps" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Wraps</a>
+    <a href="#salads" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Salads</a>
+    <a href="#kids" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Kids</a>
+    <a href="#sides" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Sides</a>
+    <a href="#desserts" class="category-pill bg-cream hover:bg-coral hover:text-white transition-colors px-4 py-2 rounded-full">Desserts</a>
+  </div>
+</nav>
+
+<p class="text-center text-xs text-charcoal/50 max-w-3xl mx-auto px-4 pt-6">
+  Prices &amp; dishes shown are last known from a previous version of our menu &mdash; please confirm with us before ordering. If you have any allergies, speak to a member of staff.
+</p>
+
+<main class="max-w-3xl mx-auto px-4 md:px-8 py-10 space-y-16">
+
+  <!-- STARTERS -->
+  <section id="starters">
+    <p class="font-script text-magenta text-xl mb-1">Bon app&eacute;tit</p>
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Starters</h2>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Mixed Kalamata Olives</h3><p class="text-sm text-charcoal/60 mt-1">Imported straight from the province itself!</p></div><div class="font-display text-coral whitespace-nowrap">&pound;4.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Halloumi Fries With Sweet Chilli</h3></div><div class="font-display text-coral whitespace-nowrap">&pound;7.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Mixed Rustic Breads</h3><p class="text-sm text-charcoal/60 mt-1">With basil infused extra virgin olive oil, hummus, butter and olives.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;7.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">PT Truffle Fries</h3><p class="text-sm text-charcoal/60 mt-1">Crispy skin-on fries tossed in black truffle oil, garnished with parmigiano cheese, crispy bacon and a sprinkle of parsley.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Tortilla Chips</h3><p class="text-sm text-charcoal/60 mt-1">With melted mozzarella, homemade salsa, guacamole and fiery jalape&ntilde;o.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Cheesy Garlic Bread Slices</h3></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Garlic and Herb Breaded Mushrooms</h3><p class="text-sm text-charcoal/60 mt-1">In a crispy breaded coating served with a sour cream and chive dip.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Shish Kebab</h3><p class="text-sm text-charcoal/60 mt-1">Lamb kebab made with spices, chargrilled, finished with mixed salad, yoghurt mint dressing and chilli.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Spiced Cod Bites</h3><p class="text-sm text-charcoal/60 mt-1">Marinated pieces of cod in our own herbs and spices, fried until crisp, served on a cool bed of salad with yoghurt mint and chilli dip.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Homemade Tzatziki</h3><p class="text-sm text-charcoal/60 mt-1">With Greek flat bread.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;6.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Lightly Dusted Calamari</h3><p class="text-sm text-charcoal/60 mt-1">Served with lemon mayo.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Thai Prawns</h3><p class="text-sm text-charcoal/60 mt-1">Wrapped in a light filo pastry, served with a sweet chilli dip.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">PT Wings</h3><p class="text-sm text-charcoal/60 mt-1">Chargrilled to perfection and tossed in a choice of marinade.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;8.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">The Sharing Board</h3><p class="text-sm text-charcoal/60 mt-1">4pcs chicken wings, cheesy garlic bread, nachos, breaded mushrooms and olives.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;24.95</div></div>
+    </div>
+  </section>
+
+  <!-- GRILL & STEAKS -->
+  <section id="grill-steaks">
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">From the Grill &mdash; Steaks</h2>
+    <img src="../assets/img/main-dish.jpg" alt="Grilled steaks with onion rings and fries at Podge & Tin" class="w-full h-56 md:h-72 object-cover rounded-lg border-2 border-coral/30 shadow-sm mb-4" />
+    <p class="text-sm text-charcoal/60 mb-6">All steaks cooked with our infused butter. Add some surf to your turf for &pound;5.95.</p>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">8oz Ribeye Steak</h3><p class="text-sm text-charcoal/60 mt-1">A lot of flavour, almost as tender as fillet with marbling throughout (we recommend medium).</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;25.50 <span class="block text-xs text-charcoal/50 font-sans font-normal">/ &pound;26.95 2 sides</span></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">8oz Sirloin</h3><p class="text-sm text-charcoal/60 mt-1">Subtle flavour with fat on the edge of the cut, a little firm in texture (we recommend medium rare).</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;25.50 <span class="block text-xs text-charcoal/50 font-sans font-normal">/ &pound;26.95 2 sides</span></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">T-Bone 16oz</h3><p class="text-sm text-charcoal/60 mt-1">A larger cut; a succulent fillet on one side and a tender sirloin on the other (we recommend medium rare).</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;31.95 <span class="block text-xs text-charcoal/50 font-sans font-normal">/ &pound;32.95 2 sides</span></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Fillet Steak</h3><p class="text-sm text-charcoal/60 mt-1">Our premium cut steak, 8oz of succulent prime beef (we recommend rare).</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;31.95 <span class="block text-xs text-charcoal/50 font-sans font-normal">/ &pound;32.95 2 sides</span></div></div>
+    </div>
+    <p class="text-sm text-charcoal/60 mt-4"><strong>Steak sauces:</strong> Diane &middot; Garlic Butter &middot; Peppercorn &middot; Red Wine &amp; Shallot Sauce. Add garlic mushrooms for &pound;2.</p>
+  </section>
+
+  <!-- MIXED GRILL -->
+  <section id="mixed-grill">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">The Mixed Grill</h2>
+    <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">The Mixed Grill</h3><p class="text-sm text-charcoal/60 mt-1">8oz 21-day aged sirloin, spiced cod bites, grilled chicken wings and lamb chop served with our house salad or chips.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;32.95</div></div>
+  </section>
+
+  <!-- LAMB CHOPS -->
+  <section id="lamb-chops">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Mediterranean Lamb Chops</h2>
+    <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Mediterranean Lamb Chops</h3><p class="text-sm text-charcoal/60 mt-1">Marinated in fresh garlic and rosemary, grilled to perfection.</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;23.95 <span class="block text-xs text-charcoal/50 font-sans font-normal">on its own / &pound;26.95 2 sides</span></div></div>
+  </section>
+
+  <!-- BURGERS -->
+  <section id="burgers">
+    <p class="font-script text-magenta text-xl mb-1">Really BIG burgers!</p>
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Burgers</h2>
+    <p class="text-sm text-charcoal/60 mb-6">All burgers served in a toasted brioche bun &mdash; &pound;12.95 on its own / &pound;15.95 +1 side / &pound;16.95 +2 sides. Double up for &pound;4.00. Our beef burgers are British or Scottish sourced and may appear a little pink from fresh cooking &mdash; can be requested well done.</p>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Cheese Burger</h3><p class="text-sm text-charcoal/60 mt-1">Perfectly grilled 7oz beef patty topped with cheese, gem lettuce, beef tomato, caramelised onion and mayo.</p></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Mexican Chicken</h3><p class="text-sm text-charcoal/60 mt-1">Marinated hot chicken breast topped with nachos, cheese, guacamole, homemade salsa, jalape&ntilde;o and chipotle.</p></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Bacon Burger</h3><p class="text-sm text-charcoal/60 mt-1">Beef patty layered with crispy bacon, melted cheese, gem lettuce, beef tomato and drizzled with burger sauce.</p></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Grilled Chicken Burger</h3><p class="text-sm text-charcoal/60 mt-1">Flame-grilled chicken breast in a marinade of your choice, topped with fresh lettuce and mayo/marinade. Add bacon and cheese &pound;1.</p></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">The Greek</h3><p class="text-sm text-charcoal/60 mt-1">Fresh minted lamb patty served with our homemade tzatziki, lettuce and cucumber.</p></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Spicy Fish Fillet</h3><p class="text-sm text-charcoal/60 mt-1">Cod fillet marinated in a selection of herbs and spices, dressed with baby gem lettuce &amp; yoghurt mint.</p></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">The Chicken Caesar</h3><p class="text-sm text-charcoal/60 mt-1">Crispy buttermilk chicken breast, paired with smoked streaky bacon, crisp lettuce, finished with a rich Caesar dressing and shaved parmesan.</p></div></div>
+    </div>
+  </section>
+
+  <!-- VERI PERI CHICKEN -->
+  <section id="veri-peri">
+    <p class="font-script text-magenta text-xl mb-1">Finger Lickin'</p>
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Veri Peri Chicken</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left border-collapse">
+        <thead>
+          <tr class="border-b-2 border-charcoal/20 text-charcoal/60 uppercase text-xs tracking-wide">
+            <th class="py-2 pr-4">Item</th><th class="py-2 pr-4">On its own</th><th class="py-2 pr-4">1 Side</th><th class="py-2">2 Sides</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-charcoal/10">
+          <tr><td class="py-3 pr-4 font-semibold">Butterfly</td><td class="py-3 pr-4">&pound;13.95</td><td class="py-3 pr-4">&pound;15.50</td><td class="py-3">&pound;16.50</td></tr>
+          <tr><td class="py-3 pr-4 font-semibold">1/4 Chicken</td><td class="py-3 pr-4">&pound;11.95</td><td class="py-3 pr-4">&pound;13.95</td><td class="py-3">&pound;14.95</td></tr>
+          <tr><td class="py-3 pr-4 font-semibold">1/2 Chicken</td><td class="py-3 pr-4">&pound;12.95</td><td class="py-3 pr-4">&pound;15.95</td><td class="py-3">&pound;16.95</td></tr>
+          <tr><td class="py-3 pr-4 font-semibold">Whole Chicken</td><td class="py-3 pr-4">&pound;18.95</td><td class="py-3 pr-4">&mdash;</td><td class="py-3">&mdash;</td></tr>
+          <tr><td class="py-3 pr-4 font-semibold">5 Wings</td><td class="py-3 pr-4">&pound;10.95</td><td class="py-3 pr-4">&pound;14.95</td><td class="py-3">&pound;15.95</td></tr>
+          <tr><td class="py-3 pr-4 font-semibold">10 Wings</td><td class="py-3 pr-4">&pound;15.95</td><td class="py-3 pr-4">&pound;17.95</td><td class="py-3">&pound;18.95</td></tr>
+          <tr><td class="py-3 pr-4 font-semibold">15 Wings</td><td class="py-3 pr-4">&pound;18.95</td><td class="py-3 pr-4">&pound;21.95</td><td class="py-3">&pound;22.95</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-charcoal/60 mt-4"><strong>Marinade &mdash; choose from:</strong> Plain &middot; Lemon &amp; Herbs &middot; Jerk BBQ &middot; Mild &middot; Hot &middot; Very Hot</p>
+  </section>
+
+  <!-- FISH & CHIPS -->
+  <section id="fish-and-chips">
+    <p class="font-script text-magenta text-xl mb-1">In cod we trust</p>
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Fish &amp; Chips</h2>
+    <p class="text-sm text-charcoal/60 mb-6">All served with chunky chips, a slice of lemon, mushy peas and tartar sauce. Chips can be fried in vegetable oil upon request. Our fish is coated in our light beer batter and fried in traditional beef dripping. Our chips are twice-fried, ensuring a fluffy centre and a crisp outer.</p>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Cod</h3><p class="text-sm text-charcoal/60 mt-1">Fresh cod caught from UK coasts.</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;14.95 <span class="block text-xs text-charcoal/50 font-sans font-normal">Small / &pound;16.95 Large</span></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Whole Tail Scampi</h3><p class="text-sm text-charcoal/60 mt-1">Fried in breadcrumbs.</p></div><div class="font-display text-coral whitespace-nowrap text-right">&pound;14.95 <span class="block text-xs text-charcoal/50 font-sans font-normal">Small / &pound;15.95 Large</span></div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Free From Fish</h3><p class="text-sm text-charcoal/60 mt-1">Battered halloumi &amp; chips.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;14.95</div></div>
+    </div>
+  </section>
+
+  <!-- FLAT BREADS -->
+  <section id="flatbreads">
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Flat Breads</h2>
+    <p class="text-sm text-charcoal/60 mb-6">&pound;15.95 on its own / &pound;17.95 +1 side / &pound;18.95 +2 sides.</p>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4"><h3 class="font-semibold">Chicken Souvlaki Skewers</h3><p class="text-sm text-charcoal/60 mt-1">Tender chicken pieces marinated in a light authentic Greek marinade, flame-grilled to perfection! Served with tzatziki, olives and green salad.</p></div>
+      <div class="py-4"><h3 class="font-semibold">Lamb Shish</h3><p class="text-sm text-charcoal/60 mt-1">Our homemade lamb skewers, authentic eastern style, incorporating our very own rustic spices. Served with house salad, yoghurt mint and chilli.</p></div>
+      <div class="py-4"><h3 class="font-semibold">Organic Tofu Skewers <span class="text-xs text-charcoal/50 font-normal">(V/VG)</span></h3><p class="text-sm text-charcoal/60 mt-1">With courgette and pepper, marinated in our special recipe, finished with house chutney.</p></div>
+    </div>
+  </section>
+
+  <!-- WRAPS -->
+  <section id="wraps">
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Tortilla Wraps</h2>
+    <img src="../assets/img/wraps.jpg" alt="Grilled chicken tortilla wrap at Podge & Tin" class="w-full h-56 md:h-72 object-cover rounded-lg border-2 border-coral/30 shadow-sm mb-4" />
+    <p class="text-sm text-charcoal/60 mb-6">&pound;13.50 on its own &middot; +1 side &pound;15.95 &middot; +2 sides &pound;16.95.</p>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4"><h3 class="font-semibold">Mediterranean Veg and Halloumi Wrap <span class="text-xs text-charcoal/50 font-normal">(V, VG option)</span></h3><p class="text-sm text-charcoal/60 mt-1">Grilled courgette, peppers, grilled red onion, tomatoes, finished with halloumi and vegan pesto.</p></div>
+      <div class="py-4"><h3 class="font-semibold">Lamb Wrap</h3><p class="text-sm text-charcoal/60 mt-1">Authentic Mediterranean lamb kebab cuts, minted, grilled with peppers and onions. Finished with Greek yoghurt and a tomato-base sauce.</p></div>
+      <div class="py-4"><h3 class="font-semibold">Grilled Chicken</h3><p class="text-sm text-charcoal/60 mt-1">Grilled chicken breast chopped and grilled in a marinade of your choice, finished with Caesar sauce and salad. Choose your marinade!</p></div>
+    </div>
+  </section>
+
+  <!-- SALADS -->
+  <section id="salads">
+    <p class="font-script text-magenta text-xl mb-1">The light option</p>
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Salads</h2>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Grilled Salmon Salad</h3><p class="text-sm text-charcoal/60 mt-1">Salmon grilled with Mediterranean vegetables, salad and mashed potato, served with cream sauce.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;17.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">PT Rainbow Salad</h3><p class="text-sm text-charcoal/60 mt-1">Organic grilled marinated tofu with house slaw, roast red pepper hummus / homemade spicy rice, mixed leaf, carrot and cucumber ribbons, avocado, pickled beetroot, garnished with sesame seed. Add grilled chicken or halloumi &pound;4.95.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;14.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Caesar Salad</h3><p class="text-sm text-charcoal/60 mt-1">Bacon, gem lettuce, mixed leaf, parmigiano, pasta, Caesar dressing and garlic croutons. Add grilled chicken or halloumi &pound;4.95.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;14.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Mediterranean Greek Salad</h3><p class="text-sm text-charcoal/60 mt-1">Mixed leaf, kalamata olives, sun-dried tomatoes, cucumber, onion, peppers, topped with feta and dressed with extra virgin olive oil. Add grilled chicken or halloumi &pound;4.95.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;14.95</div></div>
+    </div>
+  </section>
+
+  <!-- KIDS -->
+  <section id="kids">
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Kids</h2>
+    <p class="text-sm text-charcoal/60 mb-6">Choose any meal for &pound;7.95 &mdash; plus free ice cream with each meal.</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 text-sm">
+      <li class="py-1">Nuggets, Chips &amp; Beans</li>
+      <li class="py-1">Quorn Nuggets &amp; Chips (v)</li>
+      <li class="py-1">Mini Beef Burger, Chips &amp; Beans</li>
+      <li class="py-1">Cod Bites, Chips &amp; Peas</li>
+      <li class="py-1">Bernard Matthews Turkey Dinosaurs, Chips &amp; Beans</li>
+      <li class="py-1">Kids Tomato &amp; Basil Pasta with Garlic Bread (v)</li>
+      <li class="py-1">Cumberland Sausage, Chips &amp; Beans</li>
+      <li class="py-1">Grilled Chicken Strips, Chips and Beans</li>
+    </ul>
+  </section>
+
+  <!-- SIDES -->
+  <section id="sides">
+    <p class="font-script text-magenta text-xl mb-1">A cheeky bit on the side</p>
+    <h2 class="font-display text-3xl uppercase mb-2 border-b-4 border-coral inline-block pb-1">Sides</h2>
+    <p class="text-xs text-charcoal/50 mb-6">Side prices were hard to read cleanly off the old menu &mdash; please confirm current prices with us.</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 text-sm">
+      <li class="py-1">Homemade Spicy Rice</li>
+      <li class="py-1">House Slaw</li>
+      <li class="py-1">Grilled Sweetcorn</li>
+      <li class="py-1">Onion Rings</li>
+      <li class="py-1">Side Salad</li>
+      <li class="py-1">Garlic and Herb Bread</li>
+      <li class="py-1">Garlic and Herb Bread with Cheese</li>
+      <li class="py-1">Rosemary Salted / Potato Skin-on Fries</li>
+      <li class="py-1">Homemade Chunky Chips</li>
+      <li class="py-1">Sweet Potato Fries</li>
+      <li class="py-1">Homemade Mushy Peas</li>
+      <li class="py-1">Steamed Vegetables</li>
+      <li class="py-1">Mediterranean Veg</li>
+      <li class="py-1">Halloumi</li>
+      <li class="py-1">Gravy &middot; Curry Sauce &middot; Baked Beans (small extras)</li>
+    </ul>
+  </section>
+
+  <!-- DESSERTS -->
+  <section id="desserts">
+    <h2 class="font-display text-3xl uppercase mb-6 border-b-4 border-coral inline-block pb-1">Desserts</h2>
+    <div class="divide-y divide-charcoal/10">
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Chocolate Brownie</h3><p class="text-sm text-charcoal/60 mt-1">With custard or vanilla ice cream.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Cr&egrave;me Br&ucirc;l&eacute;e</h3><p class="text-sm text-charcoal/60 mt-1">Rich and creamy, served with a light crunch French biscuit.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;6.45</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Apple Crumble</h3><p class="text-sm text-charcoal/60 mt-1">With custard or ice cream.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Cheesecake of the Day</h3></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Ice Box Cake</h3><p class="text-sm text-charcoal/60 mt-1">Layered with chocolate &amp; vanilla ice cream, pistachio cream, covered in chocolate ganache.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Sticky Toffee Pudding</h3><p class="text-sm text-charcoal/60 mt-1">With custard or vanilla ice cream.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Croissant Chocolate and Raspberry Pudding</h3><p class="text-sm text-charcoal/60 mt-1">Seriously indulgent! Served with ice cream or custard.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;5.95</div></div>
+      <div class="py-4 flex justify-between gap-4"><div><h3 class="font-semibold">Chocolate Ice Cream Sundae</h3><p class="text-sm text-charcoal/60 mt-1">Rich vanilla ice cream, handmade hot fudge sauce, mini chocolate chips, topped with whipped cream and chocolate sauce.</p></div><div class="font-display text-coral whitespace-nowrap">&pound;6.95</div></div>
+    </div>
+  </section>
+
+  <div class="text-center pt-6">
+    <a href="drinks.html" class="inline-block bg-navy hover:bg-charcoal transition-colors text-white font-semibold uppercase tracking-wide text-sm px-7 py-3.5 rounded-full">View Drinks Menu &rarr;</a>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-cream">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <div class="font-display text-2xl text-white mb-3">Podge <span class="text-coral">&amp;</span> Tin</div>
+      <p class="text-sm text-cream/70">Serving awesome food, using and supporting our local independents for our fine meats and fresh fish.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Find Us</h3>
+      <p class="text-sm text-cream/80">26 Stafford Road<br />Cannock, England<br />WS11 4AG</p>
+      <a href="tel:01543899580" class="block text-sm mt-2 hover:text-coral transition-colors">01543 899580</a>
+      <a href="mailto:podgeandtin@gmail.com" class="block text-sm hover:text-coral transition-colors">podgeandtin@gmail.com</a>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Opening Hours</h3>
+      <ul class="text-sm text-cream/80 space-y-1">
+        <li>Mon &ndash; Thu: 12:00 &ndash; 21:00</li>
+        <li>Fri &ndash; Sat: 12:00 &ndash; 21:30</li>
+        <li>Sun &amp; Bank Hols: 12:00 &ndash; 19:30</li>
+      </ul>
+      <p class="text-xs text-cream/50 mt-2">Please book ahead on Fridays &amp; Saturdays.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-coral mb-3 uppercase tracking-wide">Follow Us</h3>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+        <a href="https://www.facebook.com/Podge-and-Tin-Cannock-507513026007146" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/podgeandtin" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
+        <a href="https://twitter.com/podgeandtin" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Twitter/X</a>
+      </div>
+      <a href="../jobs.html" class="inline-block mt-4 text-sm text-cream/70 hover:text-coral transition-colors">We're hiring &mdash; Careers &rarr;</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-cream/50 px-4">
+    <p>If you have any allergies, please speak to a member of staff before ordering &mdash; full allergen information is available on request.</p>
+    <p class="mt-2">&copy; <span id="year"></span> Podge &amp; Tin Eatery. Prices &amp; details last confirmed from a previous version of this site &mdash; contact us to confirm before visiting.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/parallax.js"></script>
+<script src="../assets/js/nav.js"></script>
+</body>
+</html>
