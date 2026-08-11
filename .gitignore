@@ -1,0 +1,24 @@
+# Secrets & environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies (if a build tool / package.json gets added later)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
